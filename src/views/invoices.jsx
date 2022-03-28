@@ -6,7 +6,7 @@ import './invoices.css';
 export default function Invoices() {
     let invoices = getInvoices();
     return (
-      <div style={{ display: "flex" }}>
+      <div className="invoices-body">
         <nav
           style={{
             borderRight: "solid 1px",

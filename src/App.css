@@ -12,3 +12,17 @@
   flex-direction: column;
   align-items: center;
 }
+
+.nav-item{
+  text-decoration: none;
+  color: rgb(2, 2, 90);
+  font-weight: bold;
+}
+
+.nav-item:hover{
+  color: rgb(126, 126, 231);
+}
+
+.logo-title{
+  color: rgb(1, 1, 32);
+}
