@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
+import Invoice from './views/invoice';
+import Invoices from './views/invoices';
+import Expenses from './views/expenses';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
+  <BrowserRouter>
+    <React.StrictMode>
+      <Routes>
+        <Route path='/' element={<App />}>
+        <Route path='expenses' element={<Expenses />}/>
+        <Route path='invoices' element={<Invoices />}>
+          <Route path=':invoiceId' element={<Invoice/>} />
+        </Route>
+        </Route>
+      </Routes>
+   
   </React.StrictMode>,
+  </BrowserRouter>,
+  
   document.getElementById('root')
 );
 
